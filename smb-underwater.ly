@@ -1,3 +1,4 @@
+\version "2.18.2"
 music = {
   \time 6/8
   \transpose c c' {
