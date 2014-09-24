@@ -1,6 +1,5 @@
-\version "2.18.2"
-
 music = {
+\time 4/4
   \transpose c c' {
 	s2 s4 e8 eis
 	\repeat volta 2 {
@@ -23,19 +22,4 @@ music = {
 	\bar "|."
   }
 }
-\header {
-  title = "Indiana Jones"
-  composer = "John Williams"
-}
-{
-\time 4/4
-
-<<
-  \new Staff \with { \omit StringNumber }
-  {   \music }
-  \new TabStaff \with {
-    stringTunings = \stringTuning <g' c' e' a'>
-  }
-  { \music }
->>
-}
+\include "common.ly"

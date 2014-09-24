@@ -1,4 +1,3 @@
-\version "2.18.2"
 music = {
   \time 6/8
   \transpose c c' {
@@ -18,23 +17,7 @@ music = {
 	<f'\1 c'\4>4 <f'\1 c'\4>8 <f'\1 d'\4>8 g'8. f'16
 	<bis\2 e'\1>4 r8 <f\3 a\2> <g\3 b\2> <f'\1 b\2>
 	<ais\4 dis'\1>16 \tuplet 3/2 {<b\4 e'\1> <b\4 e'\1> <b\4 e'\1>} <b\1 g\4> <bis g\4>4.
-	
+	\bar "|."
   }
 }
-\header {
-  title = "Super Mario Brothers"
-  subtitle = "Underwater"
-  composer = "近藤 浩治 (Kondou Kouzi)"
-}
-{
-\time 4/4
-
-<<
-  \new Staff \with { \omit StringNumber }
-  {   \music }
-  \new TabStaff \with {
-    stringTunings = \stringTuning <g' c' e' a'>
-  }
-  { \music }
->>
-}
+\include "common.ly"
