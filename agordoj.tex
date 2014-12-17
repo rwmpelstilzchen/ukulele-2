@@ -1,0 +1,46 @@
+\documentclass[12pt]{scrbook}
+\usepackage[a4paper, margin=2cm]{geometry}
+
+\newcommand{\footnoteremember}[2]{
+	\footnote{#2}
+	\newcounter{#1}
+	\setcounter{#1}{\value{footnote}}
+}
+\newcommand{\footnoterecall}[1]{
+	\footnotemark[\value{#1}]
+}
+
+
+\usepackage{titlesec}
+\newcommand{\sectionornament}{\hspace{0.5cm}{\symbolglyph{\color{green} ⁘}}\hspace{0.5cm}}
+\titleformat{\section}{\bfseries\Large\color{green}}{\textbf{\LR{\thesection}}\sectionornament}{0.0cm}{}[\titleline{\color{green}\titlerule}]
+
+\newcommand{\msection}[2]{\section{#1 \hfill \EO{#2}}}
+\newcommand{\msubsection}[2]{\subsection{#1 \hfill \EO{#2}}}
+\newcommand{\msubsubsection}[2]{\subsubsection{#1 \hfill \EO{#2}}}
+
+\newcommand{\tounfold}[1]{{\addfontfeature{Color=0000FFFF}\symbolglyph{\addfontfeature{Color=0000FFFF}🔧} #1 \symbolglyph{\addfontfeature{Color=0000FFFF}🔧}}}
+
+\newcommand{\betweenLilyPondSystem}[1]{\vspace{5mm}\linebreak}
+
+\newcommand{\middlebox}[1]{$\vcenter{\hbox{#1}}$}
+
+\newcommand{\muzikajxo}[6]{%
+	{\large\textbf{#1}} · #5 \hfill
+	{\label{muz:#3}\large\middlebox{\symbolglyph{#4}}}\hfill
+	\EO{{\large\textbf{#2}} · #6}
+}
+\newcommand{\lily}[1]{\begin{center}#1\end{center}}
+
+
+
+\usepackage{fontspec}
+\usepackage[RTLdocument]{bidi}
+\setmainfont[Script=Hebrew, AutoFakeSlant=-0.15, Mapping=tex-text]{Rutz_OE}
+\setmonofont[Mapping=tex-text, Scale=0.9]{PragmataPro}
+\renewcommand{\L}[1]{\LR{\fontspec{Vesper Pro}#1}}
+\newcommand{\EO}[1]{\L{#1}}
+\newcommand{\setEO}{\setLR\fontspec{Vesper Pro}}
+\newcommand{\setHE}{\setRL\normalfont}
+\newcommand{\symbolglyph}[1]{\middlebox{\,\fontspec{Symbola}#1\,}}
+

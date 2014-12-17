@@ -20,4 +20,4 @@ music = {
 	\bar "|."
   }
 }
-\include "common.ly"
+\include "komuna.ly"

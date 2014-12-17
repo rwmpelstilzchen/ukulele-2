@@ -22,4 +22,4 @@ music = {
 	}
   }
 }
-\include "common.ly"
+\include "komuna.ly"

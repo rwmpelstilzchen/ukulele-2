@@ -1,5 +1,6 @@
 music = {
-\time 4/4
+  \time 4/4
+  \tempo 4 = 180
   \transpose c c' {
 	s2 s4 e8 eis
 	\repeat volta 2 {
@@ -22,4 +23,4 @@ music = {
 	\bar "|."
   }
 }
-\include "common.ly"
+\include "komuna.ly"
